@@ -6,7 +6,7 @@ android {
 //android.useAndroidX=true
 //android.enableJetifier=true
     defaultConfig {
-        applicationId "ru.home.reijs"
+        applicationId "ru.home.spornov91"
         minSdkVersion 14
         targetSdkVersion 29
         versionCode 1
