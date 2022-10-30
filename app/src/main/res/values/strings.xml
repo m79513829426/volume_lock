@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">reijs</string>
+	<string name="notification_title">1</string>
+	<string name="notification_message">2</string>
+	<string name="ticker_text">3</string>
+    <string name="hello_world">Hi world!</string>
+
+</resources>
