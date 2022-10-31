@@ -7,7 +7,7 @@ import android.widget.*;
 
 public class IUtilites
 {
-	    public boolean listonkeydown(Context context,int keyCode, KeyEvent event) {
+	public boolean onKeyDown(Context context,int keyCode, KeyEvent event) {
 		switch (keyCode) {
 			case KeyEvent.KEYCODE_MENU:
 				Toast.makeText(context, "Нажата кнопка Меню", Toast.LENGTH_SHORT)
