@@ -30,9 +30,9 @@ public class IActivity extends Activity
 		b1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View arg0) {
-					createNotificationChannel();
-                    startService(arg0);
-					//registerBroadcastReceiver(arg0);
+					//createNotificationChannel();
+                    //startService(arg0);
+					registerBroadcastReceiver(arg0);
                 }
         });
 		b2.setOnClickListener(new View.OnClickListener(){
@@ -41,11 +41,11 @@ public class IActivity extends Activity
 				if(workThread.currentThread().isInterrupted()){
 				workThread.interrupt();
 				}
-				stopService(arg0);
+				//stopService(arg0);
 			e.setText(String.format("Версия Android: %s (%d)", 
 			Build.VERSION.RELEASE, Build.VERSION.SDK_INT));
 		//--> Пример вывода: " Версия Android: 4.0.4 (15) "
-				//unregisterBroadcastReceiver(arg0);
+				unregisterBroadcastReceiver(arg0);
 		};
 		});
 	
@@ -100,7 +100,7 @@ public class IActivity extends Activity
     // для намерения "android.intent.action.TIME_TICK".
     // Данное намерение срабатывает каждую минуту
     public void registerBroadcastReceiver(View view) {
-        //this.registerReceiver(rcr, new IntentFilter( "android.intent.action.RECEIVE_BOOT_COMPLETED"));
+        this.registerReceiver(rcr, new IntentFilter( "android.intent.action.RECEIVE_BOOT_COMPLETED"));
         Toast.makeText(getApplicationContext(), "Приёмник включен",Toast.LENGTH_SHORT).show();
     }
 
