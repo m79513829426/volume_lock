@@ -33,11 +33,10 @@ public class IUtilites
 		return true;
 		};
 		
-		public void volCh(AudioManager am){
+		public void volCh(AudioManager am, int vol){
 			int c = am.getStreamVolume(AudioManager.STREAM_MUSIC);
-			if(c > 9){
-				//e.setText("v: "+c);
-				am.setStreamVolume(AudioManager.STREAM_MUSIC,9,0);
+			if(c > vol){
+				am.setStreamVolume(AudioManager.STREAM_MUSIC,vol,0);
 			}
 		};
 };
