@@ -5,6 +5,7 @@ import android.content.*;
 import android.os.*;
 import android.support.annotation.*;
 import android.support.v4.app.*;
+import ru.home.spornov91.frag.*;
 
 public class IService extends Service
  {
@@ -18,7 +19,7 @@ public class IService extends Service
     public int onStartCommand(Intent intent, int flags, int startId) {
         String input = intent.getStringExtra("inputExtra");
 
-        Intent notificationIntent = new Intent(this, IActivity.class);
+        Intent notificationIntent = new Intent(this, FragSettings.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this,
 																0, notificationIntent, 0);
 

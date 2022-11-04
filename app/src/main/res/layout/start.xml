@@ -9,7 +9,7 @@
 	android:layout_gravity="center">
 
 	<TextView
-		android:id="@+id/et1"
+		android:id="@+id/bedit"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:text="Активная защита"
@@ -17,28 +17,22 @@
 		android:gravity="center"
 		android:padding="10dp"/>
 
-	<CheckBox
-		android:id="@+id/chbStack"
+	<LinearLayout
+		android:background="@color/profile19SplitterGray"
+		android:orientation="horizontal"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		android:text="ФОНОВАЯ СЛУЖБА"
-		android:layout_margin="10dp">
+		android:gravity="center"
+		android:layout_gravity="center">
 
-	</CheckBox>
+		<FrameLayout
+			android:id="@+id/sframe"
+			android:background="@color/profile19SplitterGray"
+			android:layout_height="400dp"
+			android:layout_width="match_parent"
+			android:layout_gravity="top|center"/>
 
-	<TextView
-		android:id="@+id/level_volume"
-		android:layout_width="wrap_content"
-		android:layout_height="wrap_content"
-		android:text="Уровень громкости: 0"
-		android:layout_gravity="left|center"
-		android:layout_margin="16dp"/>
-
-	<SeekBar
-		android:id="@+id/select_volume"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_marginTop="5dp"/>
+	</LinearLayout>
 
 	<LinearLayout
 		android:background="@color/profile19SplitterGray"
@@ -49,24 +43,24 @@
 		android:layout_gravity="center">
 
 		<Button
-			android:id="@+id/mb1"
+			android:id="@+id/bfhome"
 			android:layout_width="100dp"
 			android:layout_height="wrap_content"
-			android:text="+"
+			android:text="Домашняя"
 			android:background="@color/profile17fontGray"/>
 
 		<Button
-			android:id="@+id/mb4"
-			android:layout_width="10dp"
+			android:id="@+id/bfparallel"
+			android:layout_width="40dp"
 			android:layout_height="wrap_content"
 			android:text="|"
 			android:background="@color/profile17fontGray"/>
 
 		<Button
-			android:id="@+id/mb2"
+			android:id="@+id/bfsettings"
 			android:layout_width="100dp"
 			android:layout_height="wrap_content"
-			android:text="-"
+			android:text="Настройки"
 			android:background="@color/profile17fontGray"/>
 
 	</LinearLayout>
