@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Локер громкофона</string>
-	<string name="notification_title">1</string>
-	<string name="notification_message">2</string>
-	<string name="ticker_text">3</string>
-    <string name="hello_world">Hi world!</string>
+    <string name="app_name">Локер волума</string>
+    <string name="hello_world">Нажми старт, приложение можно закрыть.</string>
 
 </resources>

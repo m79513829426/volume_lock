@@ -1,13 +1,10 @@
-package ru.home.spornov91;
+package ru.spornov91.volume_lock;
 
 import android.app.*;
 import android.content.*;
 import android.os.*;
-import android.support.annotation.*;
-import android.support.v4.app.*;
-import ru.home.spornov91.frag.*;
 
-public class IService extends Service
+public class MainService extends Service
  {
 	private static final String CHANNEL_ID = "CID";
     @Override
@@ -17,15 +14,12 @@ public class IService extends Service
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        String input = intent.getStringExtra("inputExtra");
-
-        Intent notificationIntent = new Intent(this, FragSettings.class);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this,
-																0, notificationIntent, 0);
-
-        Notification notification = new NotificationCompat.Builder(this, CHANNEL_ID)
-			.setContentTitle("Служба безопастности")
-			.setContentText(input)
+    
+        Intent notificationIntent = new Intent(this, MainActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, 0);
+        Notification notification = new Notification.Builder(this, CHANNEL_ID)
+			.setContentTitle("Служба локера")
+			.setContentText("Волум замороженый")
 			.setSmallIcon(R.drawable.ic_launcher)
 			.setContentIntent(pendingIntent)
 			.build();
@@ -39,7 +33,6 @@ public class IService extends Service
         super.onDestroy();
     }
 
-    @Nullable
     @Override
     public IBinder onBind(Intent intent) {
         return null;
